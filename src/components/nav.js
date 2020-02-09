@@ -1,6 +1,7 @@
 import React from 'react';
 import './Nav.css';
-
+import About from "../pages/About"
+import { Link } from 'gatsby';
 class Nav extends React.Component {
     constructor(props) {
         super(props)
@@ -35,9 +36,9 @@ class Nav extends React.Component {
                         <li className={this.state.selected === 3 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.props.filterSet('communityBuilding'); this.setState({selected: 3})}}>Community building</li>
                         <li className={this.state.selected === 4 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.props.filterSet('publicEngagement'); this.setState({selected: 4})}}>Public engagement</li> */}
                         {/* <li id="home" className={this.state.selected === 2 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 2})}}>JA</li> */}
-                        <li className={this.state.selected === 1 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 1})}}>Jacob Abernethy</li>
-                        <li className={this.state.selected === 1 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 2})}}>Github</li>
-                        <li className={this.state.selected === 2 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 3})}}>About</li>
+                        <li className={this.state.selected === 1 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 1})}}><a href = "https://www.cc.gatech.edu/~jabernethy9/">Jacob Abernethy</a></li>
+                        <li className={this.state.selected === 2 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 2})}}><a href="https://github.com/UGMLTheoryGT">Github</a></li>
+                        <Link to="/About"><li className={this.state.selected === 3 ? selectedStyle.className : unselectedStyle.className} onClick={() => {this.setState({selected: 3})}}>About</li></Link>
                     </ul>
                     <center>
                     <hr width ="90%"/>

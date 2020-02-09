@@ -8,6 +8,10 @@ import { rhythm } from "../utils/typography"
 import Nav from "../components/nav.js"
 import 'bootstrap/dist/css/bootstrap.css';
 import './index.css'
+import AboutPage from "./About"
+import ReactDOM from 'react-dom';
+import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
+// import { createHashHistory } from 'history';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
@@ -72,6 +76,7 @@ const BlogIndex = ({ data, location }) => {
 }
 
 export default BlogIndex
+
 
 export const pageQuery = graphql`
   query {
