@@ -1,0 +1,18 @@
+.wrapper {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+#blog {
+    margin-bottom: 40px;
+}
+#blogDate {
+    align: right;
+    color: #888888
+}
+#blogRow {
+    margin-bottom: -1px;
+}
+
+td {
+    align: right
+}

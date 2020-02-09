@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
+import "katex/dist/katex.min.css"
+import Nav from "../components/nav"
 
 const BlogPostTemplate = ({ data, pageContext, location }) => {
   const post = data.markdownRemark
@@ -12,6 +14,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const { previous, next } = pageContext
 
   return (
+    <div>
+    <Nav />
     <Layout location={location} title={siteTitle}>
       <SEO
         title={post.frontmatter.title}
@@ -44,7 +48,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           }}
         />
         <footer>
-          <Bio />
+          {/* <Bio /> */}
         </footer>
       </article>
 
@@ -75,6 +79,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         </ul>
       </nav>
     </Layout>
+    </div>
   )
 }
 
