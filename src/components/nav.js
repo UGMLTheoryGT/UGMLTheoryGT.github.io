@@ -1,5 +1,5 @@
 import React from 'react';
-import './Nav.css';
+import './nav.css';
 import About from "../pages/About"
 import { Link } from 'gatsby';
 class Nav extends React.Component {
