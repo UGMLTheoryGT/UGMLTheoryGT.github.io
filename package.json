@@ -70,5 +70,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "deploy": "gatsby build && gh-pages -d public -b master",
     "heroku-postbuild": "gatsby build"
+  },
+  "engines": {
+    "node": "13.8.0"
   }
 }
